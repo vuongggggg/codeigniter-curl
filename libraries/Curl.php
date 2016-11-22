@@ -140,7 +140,21 @@ class Curl {
 		$this->option(CURLOPT_POST, TRUE);
 		$this->option(CURLOPT_POSTFIELDS, $params);
 	}
-
+	
+	public function put($params = array(), $options = array())
+	{
+		// If its an array (instead of a query string) then format it correctly
+		if (is_array($params))
+		{
+			$params = http_build_query($params, NULL, '&');
+		}
+		// Add in the specific options provided
+		$this->options($options);
+		$this->http_method('put');
+		$this->option(CURLOPT_POSTFIELDS, $params);
+		// Override method, I think this overrides $_POST with PUT data but... we'll see eh?
+		$this->option(CURLOPT_HTTPHEADER, array('X-HTTP-Method-Override: PUT'));
+	}
 
 	public function patch($params = array(), $options = array())
 	{
