@@ -22,6 +22,7 @@ and makes more complicated cURL requests easier too.
 * Provides debug information
 * Proxy support
 * Cookies
+* Support POST with files content
 
 ## Examples
 
