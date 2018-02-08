@@ -1,7 +1,7 @@
 # CodeIgniter-cURL
 
-## NOTE
-This is my forked. I've made post function supported file curl. Please find it in `Curl.php`.
+## Introduce
+This is my forked from `philsturgeon/codeigniter-curl`. I've made post function supported file curl. Please find it in `Curl.php`.
 
 CodeIgniter-cURL is a CodeIgniter library which makes it easy to do simple cURL requests 
 and makes more complicated cURL requests easier too.
