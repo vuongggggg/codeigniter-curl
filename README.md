@@ -64,6 +64,12 @@ These methods allow you to build a more complex request.
 	// Post - If you do not use post, it will just run a GET request
 	$post = array('foo'=>'bar');
 	$this->curl->post($post);
+	
+	// Post with custom options & multiple files
+	$post = array('foo' => 'bar');
+	$options = array(CURLOPT_BUFFERSIZE => 10);
+	$files = array('filename.ext');
+	$this->curl->post($post, $options, $files);
 
 	// Cookies - If you do not use post, it will just run a GET request
 	$vars = array('foo'=>'bar');
